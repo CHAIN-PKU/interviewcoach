@@ -1,0 +1,128 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String?
+  tier         String   @default("free")
+  createdAt    DateTime @default(now())
+
+  profile  Profile?
+  sessions Session[]
+  weakness WeaknessSummary[]
+}
+
+model Profile {
+  id               String  @id @default(cuid())
+  userId           String  @unique
+  user             User    @relation(fields: [userId], references: [id])
+  university       String?
+  major            String?
+  gpa              String?
+  targetSchool     String?
+  targetAdvisor    String?
+  advisorDirection String?
+  strengths        String?
+  concerns         String?
+  profileSummary   String?
+  resumeText       String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  experiences Experience[]
+  sessions    Session[]
+}
+
+model Experience {
+  id                  String  @id @default(cuid())
+  profileId           String
+  profile             Profile @relation(fields: [profileId], references: [id])
+  projectName         String
+  timeRange           String?
+  role                String  @default("participant")
+  methods             String?
+  outcome             String?
+  contributionSummary String?
+  sortOrder           Int     @default(0)
+
+  createdAt DateTime @default(now())
+}
+
+model HarnessTemplate {
+  id          String  @id @default(cuid())
+  name        String
+  description String?
+  config      String
+  source      String  @default("system")
+  tags        String?
+  createdBy   String?
+  useCount    Int     @default(0)
+  avgRating   Float?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  sessions Session[]
+}
+
+model Session {
+  id              String           @id @default(cuid())
+  userId          String
+  user            User             @relation(fields: [userId], references: [id])
+  profileId       String?
+  profile         Profile?         @relation(fields: [profileId], references: [id])
+  harnessId       String?
+  harness         HarnessTemplate? @relation(fields: [harnessId], references: [id])
+  mode            String           @default("practice")
+  status          String           @default("in_progress")
+  currentStage    String?
+  harnessSnapshot String?
+  totalScore      Float?
+  scoreDims       String?
+  reportJson      String?
+  userRating      Int?
+  userFeedback    String?
+  consentToShare  Boolean          @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  qaRecords QARecord[]
+}
+
+model QARecord {
+  id            String   @id @default(cuid())
+  sessionId     String
+  session       Session  @relation(fields: [sessionId], references: [id])
+  stageId       String
+  question      String
+  answer        String?
+  followUpDepth Int      @default(0)
+  parentId      String?
+  score         Float?
+  feedback      String?
+  userThumbsUp  Boolean?
+
+  createdAt DateTime @default(now())
+}
+
+model WeaknessSummary {
+  id              String @id @default(cuid())
+  userId          String
+  user            User   @relation(fields: [userId], references: [id])
+  weaknesses      String
+  basedOnSessions String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
