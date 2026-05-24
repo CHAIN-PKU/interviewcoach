@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { brandGradientBrStyle } from "@/lib/brand-styles";
 
 const INTERVIEW_TYPES = [
   { id: "夏令营面试", label: "夏令营面试", icon: "☀️", desc: "8分钟汇报 + 7分钟问答" },
@@ -253,15 +254,15 @@ export default function QuickStartPage() {
 
         {step === 3 && personalization && (
           <div className="space-y-6 animate-in fade-in duration-500">
-            <div className="bg-gradient-to-br from-indigo-600 to-violet-600 rounded-2xl p-6 text-white">
+            <div className="rounded-2xl p-6 text-white bg-indigo-600" style={brandGradientBrStyle}>
               <div className="flex items-center gap-2 mb-2">
                 <Sparkles className="w-5 h-5" />
-                <span className="text-sm font-medium text-indigo-100">AI 个性化 Harness 已就绪</span>
+                <span className="text-sm font-medium opacity-90">AI 个性化 Harness 已就绪</span>
               </div>
               <h1 className="text-xl font-bold mb-3">{personalization.headline}</h1>
               <div className="flex flex-wrap gap-2">
                 {personalization.focusAreas.slice(0, 4).map((f) => (
-                  <span key={f} className="text-xs bg-white/15 px-2.5 py-1 rounded-full">{f}</span>
+                  <span key={f} className="text-xs px-2.5 py-1 rounded-full" style={{ backgroundColor: "rgba(255,255,255,0.15)" }}>{f}</span>
                 ))}
               </div>
             </div>

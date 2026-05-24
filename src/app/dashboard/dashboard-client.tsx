@@ -46,7 +46,7 @@ export function DashboardClient() {
   }
 
   return (
-    <div className="mb-8 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-4">
+    <div className="mb-8 bg-amber-50 border border-amber-200 rounded-xl p-4" style={{ backgroundColor: "#fffbeb" }}>
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">

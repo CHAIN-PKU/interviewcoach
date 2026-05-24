@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { DashboardClient } from "./dashboard-client";
 import { countAllDistilledPatterns } from "@/lib/skill-loader";
+import { brandGradientBrStyle, brandGradientStyle, whiteOverlay20Style } from "@/lib/brand-styles";
 
 function getFlywheelStats() {
   try {
@@ -128,28 +129,28 @@ export default async function DashboardPage() {
         </div>
 
         {/* Flywheel stats banner */}
-        <div className="mb-6 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-2xl p-4 text-white">
+        <div className="mb-6 rounded-2xl p-4 text-white bg-indigo-600" style={brandGradientStyle}>
           <div className="flex items-center gap-2 mb-2">
-            <Database className="w-4 h-4 text-indigo-200" />
-            <span className="text-sm font-semibold text-indigo-100">平台数据飞轮</span>
+            <Database className="w-4 h-4 opacity-80" />
+            <span className="text-sm font-semibold">平台数据飞轮</span>
           </div>
           <div className="flex items-center gap-6 flex-wrap">
             <div className="flex items-center gap-1.5">
               <span className="text-2xl font-bold">{totalSessions}</span>
-              <span className="text-indigo-200 text-sm">次训练积累</span>
+              <span className="text-sm opacity-80">次训练积累</span>
             </div>
-            <div className="w-px h-8 bg-white/20 hidden sm:block" />
+            <div className="w-px h-8 hidden sm:block" style={{ backgroundColor: "rgba(255,255,255,0.25)" }} />
             <div className="flex items-center gap-1.5">
               <span className="text-2xl font-bold">{10 + communityRag}</span>
-              <span className="text-indigo-200 text-sm">条社区经验</span>
+              <span className="text-sm opacity-80">条社区经验</span>
             </div>
-            <div className="w-px h-8 bg-white/20 hidden sm:block" />
+            <div className="w-px h-8 hidden sm:block" style={{ backgroundColor: "rgba(255,255,255,0.25)" }} />
             <div className="flex items-center gap-1.5">
               <span className="text-2xl font-bold">{distilledCount}</span>
-              <span className="text-indigo-200 text-sm">条飞轮洞察</span>
+              <span className="text-sm opacity-80">条飞轮洞察</span>
             </div>
           </div>
-          <p className="text-xs text-indigo-300 mt-2">
+          <p className="text-xs opacity-70 mt-2">
             从用户答不好的环节提炼失败模式与改进追问，持续提升考官提问质量
           </p>
         </div>
@@ -158,18 +159,18 @@ export default async function DashboardPage() {
         <div className="grid md:grid-cols-2 gap-4 mb-8">
           {/* Quick start */}
           <Link href="/interview/quick-start" className="group">
-            <div className="bg-gradient-to-br from-indigo-600 to-violet-600 rounded-2xl p-6 text-white h-full hover:shadow-lg hover:shadow-indigo-200 transition-all hover:scale-[1.01]">
+            <div className="rounded-2xl p-6 text-white h-full bg-indigo-600 hover:shadow-lg hover:shadow-indigo-200 transition-all hover:scale-[1.01]" style={brandGradientBrStyle}>
               <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={whiteOverlay20Style}>
                   <Zap className="w-5 h-5 text-white" />
                 </div>
-                <ChevronRight className="w-5 h-5 text-white/60 group-hover:translate-x-0.5 transition-transform" />
+                <ChevronRight className="w-5 h-5 opacity-60 group-hover:translate-x-0.5 transition-transform" />
               </div>
               <h2 className="text-xl font-bold mb-2">60 秒快速开始</h2>
-              <p className="text-indigo-100 text-sm leading-relaxed mb-4">
+              <p className="text-sm leading-relaxed mb-4 opacity-90">
                 填写面试类型和研究方向，AI 生成个性化 Harness 编排，预览后进入面试
               </p>
-              <div className="flex items-center gap-1.5 text-xs text-indigo-200">
+              <div className="flex items-center gap-1.5 text-xs opacity-80">
                 <Clock className="w-3 h-3" />
                 无需上传简历，60 秒内开始
               </div>
