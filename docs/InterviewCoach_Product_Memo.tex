@@ -1,0 +1,259 @@
+% !TEX program = xelatex
+% !TEX encoding = UTF-8
+% Overleaf: Menu → Logs and output files → Delete aux/log/out, then Recompile.
+\documentclass[11pt, a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}[BoldFont=TeX Gyre Termes Bold,ItalicFont=TeX Gyre Termes Italic,BoldItalicFont=TeX Gyre Termes Bold Italic]
+\IfFontExistsTF{Noto Sans CJK SC}{%
+  \setsansfont{Noto Sans CJK SC}%
+  \newfontfamily\zhmainfont{Noto Serif CJK SC}%
+  \newfontfamily\zhsansfont{Noto Sans CJK SC}%
+  \newfontfamily\zhboldfont{Noto Sans CJK SC Bold}%
+  \newfontfamily\zhmonofont{Noto Sans CJK SC}[Scale=0.9]%
+}{%
+  \IfFontExistsTF{FandolSong}{%
+    \setsansfont{FandolSong}%
+    \newfontfamily\zhmainfont{FandolSong}%
+    \newfontfamily\zhsansfont{FandolSong-Bold}%
+    \newfontfamily\zhboldfont{FandolSong-Bold}%
+    \newfontfamily\zhmonofont{FandolFang}[Scale=0.9]%
+  }{%
+    \setsansfont{AR PL SungtiL GB}%
+    \newfontfamily\zhmainfont{AR PL SungtiL GB}%
+    \newfontfamily\zhsansfont{AR PL KaitiM GB}%
+    \newfontfamily\zhboldfont{AR PL KaitiM GB}%
+    \newfontfamily\zhmonofont{AR PL KaitiM GB}[Scale=0.9]%
+  }%
+}
+\setmonofont{DejaVu Sans Mono}[Scale=0.85]
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\AtBeginDocument{\zhmainfont}
+\usepackage[top=2.0cm, bottom=2.0cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{setspace}\setstretch{1.22}
+\usepackage{graphicx}
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
+\usepackage{booktabs}\usepackage{tabularx}\usepackage{array}
+\usepackage{fancyhdr}\setlength{\headheight}{14pt}\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\zhmainfont InterviewCoach · Product Memo}
+\fancyhead[R]{\small\zhmainfont 陈润材}
+\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\zhsansfont}{\thesection}{0.8em}{}[\vspace{1pt}\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries\zhsansfont}{\thesubsection}{0.6em}{}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=1pt, parsep=0pt, topsep=2pt, leftmargin=1.5em}
+\setlist[enumerate]{itemsep=1pt, parsep=0pt, topsep=2pt, leftmargin=1.8em}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{keypoint}[1][]{enhanced, colback=blue!3!white, colframe=RoyalBlue!70!black,fonttitle=\bfseries\zhsansfont, title=#1,boxrule=0.6pt, arc=2pt, left=6pt, right=6pt, top=3pt, bottom=3pt}
+\newtcolorbox{bizbox}[1][]{enhanced, colback=Goldenrod!8!white, colframe=Goldenrod!80!black,fonttitle=\bfseries\zhsansfont, title=#1,boxrule=0.7pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+% Stale Overleaf .aux may reference lineno macros (e.g. \@LN@col); load but do not enable line numbers.
+\usepackage{lineno}
+\usepackage[colorlinks=true,linkcolor=NavyBlue,urlcolor=RoyalBlue]{hyperref}
+\hypersetup{pdftitle={InterviewCoach Product Memo}, pdfauthor={陈润材}}
+\tolerance=1200\emergencystretch=2em\setlength{\parskip}{0.22em}
+
+\begin{document}
+\zhmainfont
+
+\begin{titlepage}
+\centering\vspace*{1.0cm}
+\noindent\textcolor{RoyalBlue!70!black}{\rule{\textwidth}{1.8pt}}\vspace{0.5cm}
+{\fontsize{26pt}{32pt}\selectfont\bfseries\zhsansfont InterviewCoach}\\[0.3cm]
+{\Large\zhsansfont Product Memo}\\[0.2cm]
+{\large\zhmainfont\textcolor{gray!65!black}{AI 模拟面试官 · 16 小时项目挑战}}\\[0.4cm]
+\noindent\textcolor{RoyalBlue!70!black}{\rule{\textwidth}{0.6pt}}\vspace{1.5cm}
+\renewcommand{\arraystretch}{1.45}
+\begin{tabular}{r @{\hspace{1em}} l}
+{\zhsansfont 姓名：} & 陈润材 \\
+{\zhsansfont 学号：} & 2300011108 \\
+{\zhsansfont 单位：} & 北京大学工学院 \\
+{\zhsansfont 提交日期：} & 2026 年 5 月 24 日 \\
+{\zhsansfont 产品链接：} & \url{https://43.128.106.155:3000} \\
+{\zhsansfont 代码仓库：} & \url{https://github.com/CHAIN-PKU/interviewcoach} \\
+\end{tabular}
+\vfill
+\noindent\textcolor{RoyalBlue!70!black}{\rule{\textwidth}{1.8pt}}
+\end{titlepage}
+
+% ================================================================
+\section{目标用户与核心痛点}
+% ================================================================
+
+\textbf{目标用户：}CS/AI 方向、准备保研夏令营 / 预推免复试的准大四本科生。Demo 阶段刻意收窄，不做大厂实习或博士面试泛化。
+
+\textbf{用户调研：}挑战开始前，我通过微信快速访谈了 2--3 位正在准备保研的同学，并结合自身经历，归纳核心痛点：\emph{缺高频陪练}、\emph{ChatGPT 反馈随机且不可执行}、\emph{8 分钟汇报与追问脱节}、\emph{AI 辅助项目怕被追问细节}、\emph{团队项目个人贡献边界不清}。
+
+% ================================================================
+\section{产品设计说明}
+% ================================================================
+
+\subsection{编码前的架构思考（Vibe Coding 之前）}
+
+在写第一行代码前，我先把「为什么要做、和 ChatGPT 差在哪」想清楚。ChatGPT 的问题是\textbf{被动、随机、无记忆}；InterviewCoach 的设计目标是\textbf{主动编排、专业注入、持续积累}。具体落为五条架构决策：
+
+\begin{enumerate}
+  \item \textbf{Harness 工程——主动编排而非被动聊天。}面试不是自由对话，而是有阶段、时长、追问深度与评分维度的流程。系统应像「科目一教练」一样\textbf{主动推进}：何时汇报、何时深挖、何时收尾，均由训练方案驱动，而非等用户即兴提问。
+
+  \item \textbf{Skill + RAG 预接入，树形分层路由。}面试相关知识不应临时塞进 Prompt，而应在编码前设计\textbf{分层知识网络}：方向层（扩散模型 / 具身智能）$\to$ 阶段层（汇报 / 科研追问 / 基础 / 开放）$\to$ 策略层（Skill JSON）$\to$ 经验层（RAG 索引）。运行时按用户方向与当前阶段快速路由，只注入相关子树，兼顾专业性与 token 成本。
+
+  \item \textbf{冷启动 $\to$ 蒸馏 $\to$ 复用，用户授权门控。}
+  平台早期靠大量真实交互完成冷启动，形成「\emph{越练越准}」的积累路径：
+  \begin{itemize}[topsep=2pt, itemsep=1pt]
+    \item \textbf{蒸馏什么：}从用户\textbf{答不好的环节}（未作答、回答过短、被追问击穿、用户标记不合适）提炼失败模式与改进追问，而非收集高分题目模板；
+    \item \textbf{怎么复用：}蒸馏结果写入方向级 Skill 与 RAG，后续同方向用户的考官 Prompt 自动注入；
+    \item \textbf{授权门控：}涉及具体专业场景的可识别 Q\&A，须经用户显式勾选「同意共享」后方可入库蒸馏，拒绝则仅做脱敏统计——既推动飞轮，也回应「不愿被竞争对手直接抄走训练方案」的顾虑。
+  \end{itemize}
+
+  \item \textbf{分档模型路由（技术预留，Demo 无真实收费）。}架构上区分 Free / Pro 模型（DeepSeek vs Claude Sonnet），用于控制 API 成本与能力梯度；Demo 阶段通过体验码 \texttt{DEMO2026} 模拟升级。\textbf{未接入真实支付}——16h 内优先验证训练闭环；页面上虽有 Free/Pro 对比与占位标价，但属于演示 UI，非经竞品调研确定的正式定价。
+
+  \item \textbf{「科目一」双模式（规划）。}借鉴驾校：\textbf{练习模式}允许文字/语音、可查看即时提示；\textbf{模考模式}强制开摄像头+麦克风、限时作答、无提示，由多模态模型分析表达与基本仪态。16h 内完成练习闭环，模考多模态留作下一步。
+\end{enumerate}
+
+\begin{bizbox}[商业模式思考：「双乙方」问题与 Demo 阶段的取舍]
+\textbf{【特别注明】}本次 Demo \textbf{不对用户真实收费}，也\textbf{未完成竞品调研后的正式定价}。但产品内实现了 \texttt{/pricing} 定价页作为\textbf{演示画面}：展示 Free/Pro 功能差异、占位价「¥68/月」与「立即充值（演示）」按钮（点击无支付链路），评委可通过体验码 \texttt{DEMO2026} 切换 Pro 模型——目的是让评委看到「若商业化，Free/Pro 如何分层」，而非宣布已确定的售价。
+
+\vspace{0.35em}
+\noindent刻意不做真实定价的原因有三：\emph{(i)}~16h 挑战的核心目标是验证「是否比 ChatGPT 更有训练价值」，而非商业模式落地；\emph{(ii)}~截止前\textbf{尚未完成充分的竞品调研与市场需求验证}（同类 AI 面试产品的定价区间、用户付费意愿、院校/机构采购逻辑等），页面上 ¥68 仅为占位数字，\textbf{不能当作市场调研结论}；\emph{(iii)}~若后续创业，将在补充调研后再确定定价权、Free/Pro 边界与防压价策略。
+
+\vspace{0.35em}
+\noindent尽管如此，\textbf{编码前我已认真考虑过平台「双乙方」困境}（这也是创业者式思考，而非纯功能堆砌）：
+\begin{itemize}[topsep=2pt, itemsep=1pt]
+  \item \textbf{上游挤压：}LLM 越来越便宜，纯套壳中间层会被 AI 厂商压价；
+  \item \textbf{下游挤压：}用户随时可退回 ChatGPT，免费工具很难靠「聊得爽」留存；
+  \item \textbf{我的判断：}护城河在\textbf{数据飞轮}——谁积累最多「某类用户在何处答垮、何种追问最有效」的弱项洞察，谁才真正「懂这类面试」；
+  \item \textbf{架构预埋：}consent 授权蒸馏、弱点追踪、方向级 Skill/RAG 沉淀，是在构建\textbf{面试垂类数据网络}，而非一次性对话——参考抖音等内容平台：网络效应形成后，双边议价权才有可能从「双乙方」转向「双甲方」。
+\end{itemize}
+
+\vspace{0.25em}
+\noindent\textbf{Demo 与创业的边界：}当前全部功能实际可免费使用；体验码用于评委测试 Pro 模型效果。\textbf{定价页是 UI 演示，不是定价决策}——不是「没想过商业化界面」，而是\textbf{调研不够、时间不够}，先把训练价值跑通；「如何不被 AI 和用户两边压价」的逻辑，则已预埋在飞轮与授权门控的架构中。
+\end{bizbox}
+
+\subsection{核心功能闭环（已实现）}
+
+\begin{center}
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=3pt, minimum height=0.6cm, font=\scriptsize\zhsansfont, align=center, inner sep=3pt},
+  arr/.style={-{Stealth[length=3pt]}, thick, gray!70!black},
+  node distance=0.45cm and 0.25cm
+]
+\node[box, fill=SteelBlue!10] (a) {建档/快速开始};
+\node[box, fill=SeaGreen!10, right=of a] (b) {AI 训练方案};
+\node[box, fill=Orange!10, right=of b] (c) {分阶段面试};
+\node[box, fill=Salmon!10, right=of c] (d) {结构化报告};
+\node[box, fill=Violet!8, below=0.55cm of b] (e) {飞轮蒸馏};
+\draw[arr] (a)--(b)--(c)--(d);
+\draw[arr] (d.south)-|(e.east);
+\draw[arr] (e.west)-|(a.south);
+\end{tikzpicture}
+\end{center}
+
+\noindent已实现：Harness 状态机、Skill/RAG 分层注入、计时压力、STT/TTS、弱项驱动蒸馏、模型分档、\textbf{定价页演示 UI}（Free/Pro 对比 + 体验码升级）。\textbf{16h 内刻意未做：}真实支付接入、经调研确认的正式定价、摄像头模考、PPT 同步翻页、论文联网核验。
+
+\begin{keypoint}[内测暴露的关键教训：Grounding 与 RAG 冷启动]
+\textbf{简历幻觉：}Free 档 LLM 在「训练方向」与「档案项目」不一致时，易编造「简历里写过某课程/项目」以自圆其说；根因是 Prompt 缺少「只能引用档案明文」约束，且 demo 档案摘要曾含「引导追问课程项目」的 meta 指令。\textbf{修复：}简历事实约束 Prompt + 清理档案 + 方向冲突 UI 提示。
+
+\textbf{RAG 过薄：}早期 \texttt{rag\_index.json} 仅 6 条社区蒸馏 \texttt{criteria}，tags 不含「清华/朱军」等，导致 \texttt{queryRAG} 对目标院校/导师返回空串——Harness 生成与面试 Prompt 均无院校/导师先验。\textbf{修复：}调研 C9 及主要 985 高校 CS/AI 公开主页，手工整理 53 条 \texttt{experience}（含实验室 URL、考察偏好），检索命中率由 0 提升至 4--5 条/查询。
+\end{keypoint}
+
+% ================================================================
+\section{版本迭代记录}
+% ================================================================
+
+\subsection{架构级迭代}
+
+\begin{enumerate}
+  \item \textbf{v0$\to$v1：}固定问答 $\to$ Harness 阶段状态机（汇报/追问/基础/开放）。
+  \item \textbf{v1$\to$v2：}手动配置 $\to$「60 秒快速开始」+ AI 生成训练方案。
+  \item \textbf{汇报阶段 bug：}考官在汇报时出题（透题）$\to$ silent mode + 阶段隔离 Prompt。
+  \item \textbf{评分失真：}未答题仍高分 $\to$ \texttt{report-scoring.ts} 阶段感知规则。
+  \item \textbf{开放题角色错乱：}AI 替学生作答 $\to$ 开场 Prompt 约束 + 回复校验。
+  \item \textbf{飞轮重构：}高分题模板 $\to$ 弱项驱动（failure\_pattern / improved\_probe）。
+  \item \textbf{体验码失效：}JWT 与 DB tier 不同步 $\to$ auth callback 修复。
+  \item \textbf{简历幻觉（评委实测）：}AI 编造「简历里有大语言模型课程项目」等未出现内容 $\to$ Prompt 增加「简历事实约束」；清理 demo 档案 meta 触发词；快速开始增加方向冲突提示。
+  \item \textbf{RAG 冷启动不足：}早期仅 6 条社区 \texttt{criteria}，对「清华+朱军」检索为空 $\to$ 调研公开主页后扩充 50+ 条 \texttt{experience}（院校/导师/实验室 URL）。
+\end{enumerate}
+
+\subsection{内测发现与针对性调整}
+
+下表为本人内测中暴露的问题及处理状态（「待做」列入 §4）：
+
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.52\textwidth} p{0.14\textwidth} X@{}}
+\toprule
+\textbf{内测发现} & \textbf{状态} & \textbf{处理方式} \\
+\midrule
+语音交互缺失，打字远慢于真实面试节奏 & 部分解决 & 接入 Whisper STT + Edge TTS；模考强制语音待做 \\
+输入框单行、长文不可见 & 已修复 & 自适应 textarea；Enter 发送、Shift+Enter 换行 \\
+汇报需 PPT 翻页、考官边看边听 & 待做 & 规划 PPT 上传 + 同步翻页 UI \\
+对话提及论文时无法联网核验 & 待做 & 规划「检索$\to$用户确认$\to$读全文$\to$针对性追问」 \\
+剩余 $<$20s 仍展开追问，来不及答 & 已修复 & 60s/30s 提醒 + 阶段结束自动切换 \\
+TTS 机械、不像考官 & 已改善 & 换 Edge TTS 自然声线；语速/人设可继续调 \\
+PDF 简历无法提取 & 已修复 & 修复 \texttt{pdf-parse} 服务端解析（与是否脱敏无关） \\
+档案必填/选填未区分 & 已修复 & 院校、专业、目标院校、方向等标必填 \\
+Demo 账号数据需给评委重置 & 已支持 & \texttt{npm run seed:reset} 一键恢复 \\
+非 CS/AI 方向能否识别 & 部分 & 依赖用户自选方向 + 模板匹配；非理工弱识别 \\
+填了「北大先进制造 宋洁」是否调研课题组 & 部分 & 快速开始注入方向上下文；已扩充 RAG 院校/导师条目（公开主页），深度联网待做 \\
+AI 编造简历未出现的项目/课程经历 & 已修复 & Prompt「简历事实约束」+ 清理 demo profileSummary + 方向冲突提示 \\
+训练方向与档案方向不一致无感知 & 已修复 & 快速开始 Step2 黄色冲突提示（以用户选择为准） \\
+RAG 对目标院校/导师检索为空 & 已修复 & 扩充 \texttt{rag\_index.json} 至 50+ 条 experience（含 lab URL） \\
+考官计时与用户倒计时不同步 & 已修复 & 前端统一计时驱动阶段结束，禁止 LLM 自行跳阶段 \\
+数学公式考察：打字/语音均难表达 & 待思考 & 规划 LaTeX 输入或「口述+确认」模式 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+
+% ================================================================
+\section{下一步设计（再给一周）}
+% ================================================================
+
+\begin{enumerate}
+  \item \textbf{科目一模考：}摄像头+麦克风强制开启，关闭即时提示，多模态分析表达与仪态。
+  \item \textbf{汇报 PPT 同步：}上传 slides，面试页翻页，考官「边看边听」。
+  \item \textbf{论文联网核验：}用户提及发表物 $\to$ 检索确认 $\to$ 授权阅读 $\to$ 基于原文追问。
+  \item \textbf{数学考察交互：}支持公式卡片/LaTeX 快捷输入，或「语音口述$\to$结构化确认$\to$再追问」。
+  \item \textbf{导师/课题组知识库（已启动）：}已从各校/导师公开主页整理 50+ 条 RAG \texttt{experience}（含方向、考察偏好、lab URL）；后续可接联网抓取自动更新。
+  \item \textbf{竞品调研与定价设计：}系统梳理同类 AI 面试产品定价、目标用户付费意愿与 B 端（院校/机构）采购路径，在此基础上设计 Free/Pro 边界与防「双乙方」压价策略。
+  \item \textbf{飞轮可视化 + 生产部署：}Dashboard 展示蒸馏洞察；\texttt{next start} 进程守护。
+\end{enumerate}
+
+% ================================================================
+\section{AI 工具使用}
+% ================================================================
+
+\subsection{产品设计阶段（编码前）}
+
+\noindent\textbf{本人主导，AI 分角色辅助。}整体流程为「先自己想清楚 $\to$ 设计迭代 $\to$ 对抗挑刺 $\to$ 成熟后再写代码」：
+
+\begin{enumerate}
+  \item \textbf{独立思考 + 用户调研（本人）。}挑战开始前，我先梳理目标用户痛点（微信访谈 2--3 位同学），形成 Harness、飞轮、双乙方等\textbf{原始产品直觉}，不直接交给 AI 代写方案。
+  \item \textbf{Claude Opus 4.6 Extended——设计共创。}将我的痛点与初步想法输入 Claude，迭代产品架构、用户流程、Skill/RAG 分层、Demo 叙事等，把模糊直觉打磨成可执行的规格文档（即 \texttt{HANDOFF.md} 与规格复盘的前半部分）。
+  \item \textbf{GPT-5.5 Thinking Extended——GAN 式对抗挑刺。}把 Claude 迭代后的方案交给 GPT 扮演「挑剔的评委/投资人」：刻意找设计漏洞、范围过大、与 ChatGPT 差异不足、Demo 风险点等，逼出遗漏与过度设计，形成更成熟的第二版方案。
+  \item \textbf{Cursor——实现迭代。}设计方案相对稳定后，才进入 Vibe Coding：在 Cursor 中全栈开发、debug、根据内测反馈快速修 bug。
+\end{enumerate}
+
+\begin{keypoint}[分工原则]
+\textbf{设计决策归我，AI 不替代判断。}Opus 负责「帮我想深」；GPT 负责「帮我想全、挑刺」；Cursor 负责「帮我把对的方案做出来」。产品内运行时则另用 Sonnet/DeepSeek 等 API。
+\end{keypoint}
+
+\subsection{开发与产品内嵌阶段}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+\textbf{工具} & \textbf{用途} \\
+\midrule
+Claude Opus 4.6 Extended & 编码前：产品理念迭代、架构与流程共创 \\
+GPT-5.5 Thinking Extended & 编码前：GAN 对抗式评审，挑设计毛病与盲区 \\
+Cursor & 编码阶段：全栈实现、debug、内测驱动迭代 \\
+Claude Sonnet（OpenRouter） & 产品内 Pro 档：考官追问、Harness 生成、报告、飞轮分析 \\
+DeepSeek（OpenRouter） & 产品内 Free 档：对话与报告 \\
+Edge TTS / Whisper & 语音播报与转写 \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.3em}
+\noindent\textbf{诚信说明：}用户调研、痛点归纳、商业模式与迭代取舍为本人主导；Opus/GPT 用于设计阶段的共创与红队挑刺，Cursor 用于实现。产品内 API 调用与测试数据（脱敏/虚构简历、Demo 账号）界限见上文。
+
+\end{document}
