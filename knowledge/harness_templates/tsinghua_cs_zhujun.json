@@ -1,0 +1,72 @@
+{
+  "id": "tsinghua-cs-zhujun-2025",
+  "name": "清华计算机-朱军组夏令营",
+  "description": "汇报8分钟+提问7分钟，侧重扩散模型/贝叶斯方向",
+  "source": "system",
+  "tags": ["清华", "计算机", "朱军", "夏令营", "ML", "扩散模型", "贝叶斯"],
+  "stages": [
+    {
+      "id": "intro",
+      "name": "个人汇报",
+      "type": "presentation",
+      "duration_min": 8,
+      "strict_timer": true,
+      "instructions": "用户进行自我介绍和科研汇报。考官不打断，到时间提醒收尾。",
+      "scoring_dims": ["内容完整性", "重点突出度", "时间控制", "表达流畅度"],
+      "follow_up_depth": 0,
+      "skills_required": ["presentation_coaching"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 0, "skip_if": "", "difficulty_adjust": false }
+    },
+    {
+      "id": "research_drill",
+      "name": "科研追问",
+      "type": "qa",
+      "duration_min": 4,
+      "strict_timer": true,
+      "instructions": "基于用户汇报内容和科研经历，深挖技术细节。优先追问与朱军老师方向（扩散模型、贝叶斯）匹配的项目。特别关注：Claude Code辅助实现的代码理解深度、ablation实验设计、团队贡献边界。",
+      "scoring_dims": ["技术深度", "问题分析能力", "诚实度"],
+      "follow_up_depth": 3,
+      "skills_required": ["research_questioning", "code_implementation_probing"],
+      "adaptive_rules": { "extend_if": "用户回答深度高且有追问空间", "extend_max_min": 2, "skip_if": "用户连续2次明确表示不了解", "difficulty_adjust": true }
+    },
+    {
+      "id": "basics",
+      "name": "专业基础",
+      "type": "qa",
+      "duration_min": 2,
+      "strict_timer": true,
+      "instructions": "考察ML/DL基础知识，偏扩散模型和贝叶斯方向。难度适中。",
+      "scoring_dims": ["知识广度", "概念清晰度"],
+      "follow_up_depth": 1,
+      "skills_required": ["ml_basics_questioning"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 1, "skip_if": "", "difficulty_adjust": true }
+    },
+    {
+      "id": "open",
+      "name": "开放性问题",
+      "type": "open_discussion",
+      "duration_min": 1,
+      "strict_timer": true,
+      "instructions": "询问未来规划、为什么选朱军组、你能给课题组带来什么价值。",
+      "scoring_dims": ["规划清晰度", "匹配度", "真诚度"],
+      "follow_up_depth": 1,
+      "skills_required": ["open_questions"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 0, "skip_if": "", "difficulty_adjust": false }
+    }
+  ],
+  "interviewer_persona": {
+    "style": "学术严谨但不刁难，会追问技术细节但态度温和。语速适中，给学生思考时间。",
+    "focus_areas": ["扩散模型", "贝叶斯深度学习", "生成模型", "变分推断"],
+    "red_flags_to_probe": [
+      "用AI工具完成的工作要追问真实理解深度",
+      "团队项目中要区分个人贡献",
+      "ablation实验设计是否完整"
+    ],
+    "criteria_insights": [
+      "说不知道比编答案强100倍",
+      "追问时看的是思考过程不是最终答案",
+      "能清晰区分自己做了什么和别人做了什么",
+      "有失败经历但能分析原因的比一路顺利的更加分"
+    ]
+  }
+}

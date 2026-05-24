@@ -1,0 +1,112 @@
+{
+  "entries": [
+    {
+      "id": "community_weak_attention_3h2k",
+      "type": "criteria",
+      "summary": "学生回答技术细节时容易展开过度，考官应控制时间并引导核心要点",
+      "tags": [
+        "技术面试",
+        "时间管理",
+        "回答结构"
+      ],
+      "key_insights": [
+        "学生在解释技术实现时往往过分详细，缺乏层次感和重点突出",
+        "考官应在提问时明确时间限制和回答重点，避免学生陷入过度展开",
+        "需要引导学生区分核心思路、具体实现和实验结果的优先级"
+      ],
+      "quality": 4,
+      "source": "community",
+      "distilled_from_count": 7
+    },
+    {
+      "id": "community_weak_transition_8n4f",
+      "type": "criteria",
+      "summary": "面试流程中出现不自然的提示词暴露，考官应改进问题衔接",
+      "tags": [
+        "面试流程",
+        "问题设计",
+        "自然对话"
+      ],
+      "key_insights": [
+        "考官在面试开始时直接复述了系统提示，破坏了面试的自然性",
+        "学生回答'汇报完毕'后的过渡显得生硬，暴露了模拟面试的痕迹",
+        "考官应设计更自然的问题衔接和过渡语，保持面试对话的流畅性"
+      ],
+      "quality": 4,
+      "source": "community",
+      "distilled_from_count": 7
+    },
+    {
+      "id": "community_weak_impl_3x9k",
+      "type": "criteria",
+      "summary": "学生能够较好地理解算法原理，但在具体实现细节的表述上缺乏精确性和完整性",
+      "tags": [
+        "实现细节",
+        "技术表述",
+        "工程实践"
+      ],
+      "key_insights": [
+        "学生对自适应时间步选择策略的核心思想理解正确，但在数学公式表达和算法实现步骤的描述上存在不够严谨的问题",
+        "cross-attention分析部分回答被截断，暴露出学生可能在复杂技术细节的完整表述能力上有待提升",
+        "考官应该通过更具体的子问题引导学生系统性地描述实现过程，而不是要求一次性完整阐述"
+      ],
+      "quality": 4,
+      "source": "community",
+      "distilled_from_count": 8
+    },
+    {
+      "id": "community_weak_depth_7m2n",
+      "type": "criteria",
+      "summary": "学生在回答技术问题时容易流于表面，缺乏对深层原理和关键挑战的深入分析",
+      "tags": [
+        "深度思考",
+        "原理理解",
+        "问题分析"
+      ],
+      "key_insights": [
+        "虽然学生展示了对扩散模型、cross-attention等技术的基本掌握，但在解释为什么这样设计、有什么局限性、如何改进等深层问题上回答不够深入",
+        "考官应该增加'为什么'、'有什么问题'、'如何优化'类型的追问，引导学生进行更深层次的思考",
+        "建议考官通过对比性问题和假设性场景来测试学生的批判性思维和问题解决能力"
+      ],
+      "quality": 4,
+      "source": "community",
+      "distilled_from_count": 8
+    },
+    {
+      "id": "community_weak_technical_depth_7f3a",
+      "type": "criteria",
+      "summary": "考生回答过度冗长繁琐，缺乏核心技术洞察，考官需要引导更精准表达",
+      "tags": [
+        "技术深度",
+        "表达能力",
+        "冗长回答"
+      ],
+      "key_insights": [
+        "考生技术描述过于冗长，8分钟自我介绍包含大量细节但缺乏重点突出",
+        "回答技术问题时公式推导过多，但对核心创新点和局限性分析不足",
+        "考官应设置时间限制并引导考生聚焦关键技术贡献和思考深度"
+      ],
+      "quality": 4,
+      "source": "community",
+      "distilled_from_count": 9
+    },
+    {
+      "id": "community_weak_followup_8b2e",
+      "type": "criteria",
+      "summary": "考官追问缺乏针对性，未能有效挖掘考生真实技术理解和独立思考",
+      "tags": [
+        "追问技巧",
+        "技术验证",
+        "深度挖掘"
+      ],
+      "key_insights": [
+        "考官问题过于宽泛，让考生有机会背诵准备好的冗长材料",
+        "缺乏针对具体技术细节的尖锐追问，未能验证考生真实理解深度",
+        "应设计更多开放性难题和批判性思考问题，避免让考生陷入细节展示"
+      ],
+      "quality": 4,
+      "source": "community",
+      "distilled_from_count": 9
+    }
+  ]
+}

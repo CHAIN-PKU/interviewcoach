@@ -1,0 +1,101 @@
+{
+  "id": "distilled_diffusion_models",
+  "name": "扩散模型·社区蒸馏追问",
+  "version": "2.0",
+  "direction_key": "diffusion_models",
+  "source": "community_distill",
+  "strategy": {
+    "probing_patterns": [
+      "score matching 和 denoising score matching 的联系能否用三句话说明？ [distilled: true]",
+      "你的采样加速策略如何保证少步数下语义不崩？ [distilled: true]",
+      "classifier-free guidance 训练时如何构造条件 dropout？ [distilled: true]",
+      "我看你对SE(3)等变网络有一定了解。先说说你理解的'等变性'是什么意思？然后我们再聊聊在分子生成中为什么需要这个特性？ [distilled:weakness]",
+      "你提到了分子的图结构和3D坐标表示，这个思路很好。那在实际训练时，你觉得最大的技术挑战是什么？是数据处理还是模型设计？ [distilled:weakness]",
+      "扩散模型中时间步是个重要概念。你在项目中有没有观察过不同时间步下模型的表现差异？比如早期和后期的生成质量？ [distilled:weakness]",
+      "我看你对SE(3)-等变网络有一定了解。先问个基础的：你觉得在分子生成中，为什么需要考虑旋转和平移等变性？然后我们再聊具体的网络设计。 [distilled:weakness]",
+      "关于消息传递的权重控制，你在实验中有没有发现什么规律？比如噪声大的时候，你觉得应该更依赖局部信息还是全局信息？ [distilled:weakness]",
+      "我看你提到了SE(3)等变网络，先不谈具体实现。你觉得为什么分子生成需要考虑旋转和平移不变性？这个直觉是怎么来的？ [distilled:weakness]",
+      "你在训练过程中有没有观察到，早期时间步和后期时间步的学习难度是不是不一样？如果是的话，你会怎么调整？ [distilled:weakness]",
+      "没关系，你已经开始得很好了。继续说说你理解的扩散过程，就算有些地方不确定也可以说出你的想法。 [distilled:weakness]"
+    ],
+    "topic_hints": [
+      "生成质量指标",
+      "采样步数与效率权衡"
+    ],
+    "weakness_insights": [
+      {
+        "id": "wi_diffusion_models_1779540878353_s0ni",
+        "failure_pattern": "听到问题就逃避或直接跳过",
+        "root_cause": "问题过于技术细节化，用户缺乏深度实现经验，产生畏难情绪直接放弃",
+        "improved_probe": "我看你对SE(3)等变网络有一定了解。先说说你理解的'等变性'是什么意思？然后我们再聊聊在分子生成中为什么需要这个特性？",
+        "avoid": "直接问具体实现细节，如'如何设计等变网络来预测噪声'",
+        "evidence_count": 1,
+        "updated_at": "2026-05-23T12:54:38.353Z"
+      },
+      {
+        "id": "wi_diffusion_models_1779540878353_gt4d",
+        "failure_pattern": "开始解释后突然中断或敷衍",
+        "root_cause": "用户有基础概念但缺乏深入理解，遇到需要展开的技术细节时底气不足",
+        "improved_probe": "你提到了分子的图结构和3D坐标表示，这个思路很好。那在实际训练时，你觉得最大的技术挑战是什么？是数据处理还是模型设计？",
+        "avoid": "在用户刚开始解释时就追问复杂的权重设计等实现细节",
+        "evidence_count": 1,
+        "updated_at": "2026-05-23T12:54:38.353Z"
+      },
+      {
+        "id": "wi_diffusion_models_1779540878353_j9f7",
+        "failure_pattern": "对时间步相关参数设计认知空白",
+        "root_cause": "扩散模型的时间步调度是高级话题，用户可能只了解基础概念，没有调参经验",
+        "improved_probe": "扩散模型中时间步是个重要概念。你在项目中有没有观察过不同时间步下模型的表现差异？比如早期和后期的生成质量？",
+        "avoid": "直接问权重比例确定方法等需要实际调参经验的问题",
+        "evidence_count": 1,
+        "updated_at": "2026-05-23T12:54:38.353Z"
+      },
+      {
+        "id": "wi_diffusion_models_1779541492733_l3i9",
+        "failure_pattern": "技术细节恐慌性逃避",
+        "root_cause": "问题跳跃度过大，从概念直接到实现细节，用户缺乏过渡铺垫时间来组织思路",
+        "improved_probe": "我看你对SE(3)-等变网络有一定了解。先问个基础的：你觉得在分子生成中，为什么需要考虑旋转和平移等变性？然后我们再聊具体的网络设计。",
+        "avoid": "直接问'如何设计等变网络预测噪声'这种复合性技术问题",
+        "evidence_count": 1,
+        "updated_at": "2026-05-23T13:04:52.733Z"
+      },
+      {
+        "id": "wi_diffusion_models_1779541492733_vjd7",
+        "failure_pattern": "参数设计问题直接放弃",
+        "root_cause": "时间步权重设计属于实验调参经验，用户可能缺乏实际调参经历，无法给出具体数值或策略",
+        "improved_probe": "关于消息传递的权重控制，你在实验中有没有发现什么规律？比如噪声大的时候，你觉得应该更依赖局部信息还是全局信息？",
+        "avoid": "问'如何确定最佳权重比例'这种需要具体数值的实现问题",
+        "evidence_count": 1,
+        "updated_at": "2026-05-23T13:04:52.733Z"
+      },
+      {
+        "id": "wi_diffusion_models_1779584054177_1wwo",
+        "failure_pattern": "技术细节问题立即逃避",
+        "root_cause": "问题跨度太大，从高层概念直接跳到底层实现细节，用户无法建立认知桥梁",
+        "improved_probe": "我看你提到了SE(3)等变网络，先不谈具体实现。你觉得为什么分子生成需要考虑旋转和平移不变性？这个直觉是怎么来的？",
+        "avoid": "直接问具体的网络架构设计和数学推导",
+        "evidence_count": 1,
+        "updated_at": "2026-05-24T00:54:14.177Z"
+      },
+      {
+        "id": "wi_diffusion_models_1779584054177_jwqm",
+        "failure_pattern": "参数调优问题直接放弃",
+        "root_cause": "缺乏从实验观察到参数设计的思维链条，不知道如何将现象转化为解决方案",
+        "improved_probe": "你在训练过程中有没有观察到，早期时间步和后期时间步的学习难度是不是不一样？如果是的话，你会怎么调整？",
+        "avoid": "直接问权重公式和最佳比例数值",
+        "evidence_count": 1,
+        "updated_at": "2026-05-24T00:54:14.177Z"
+      },
+      {
+        "id": "wi_diffusion_models_1779584054177_82d0",
+        "failure_pattern": "开始回答后突然中断",
+        "root_cause": "对自己的理解深度没有信心，担心说错而选择逃避，缺乏'说到哪算哪'的心态",
+        "improved_probe": "没关系，你已经开始得很好了。继续说说你理解的扩散过程，就算有些地方不确定也可以说出你的想法。",
+        "avoid": "打断后直接换更难的问题",
+        "evidence_count": 1,
+        "updated_at": "2026-05-24T00:54:14.177Z"
+      }
+    ],
+    "distill_focus": "weakness_driven"
+  }
+}

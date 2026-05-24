@@ -1,0 +1,67 @@
+{
+  "id": "general-baoyan-2025",
+  "name": "通用保研复试",
+  "description": "适用于大多数CS/AI院校保研复试，自我介绍+科研汇报+专业问答",
+  "source": "system",
+  "tags": ["通用", "保研", "复试", "CS", "AI"],
+  "stages": [
+    {
+      "id": "intro",
+      "name": "自我介绍",
+      "type": "presentation",
+      "duration_min": 5,
+      "strict_timer": true,
+      "instructions": "用户做自我介绍和科研经历介绍。重点关注：是否有清晰的研究方向、科研成果是否突出、与目标院校方向的匹配度。",
+      "scoring_dims": ["内容完整性", "重点突出度", "时间控制", "表达流畅度"],
+      "follow_up_depth": 0,
+      "skills_required": ["presentation_coaching"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 0, "skip_if": "", "difficulty_adjust": false }
+    },
+    {
+      "id": "research_drill",
+      "name": "科研追问",
+      "type": "qa",
+      "duration_min": 5,
+      "strict_timer": true,
+      "instructions": "针对用户最核心的1-2个科研项目进行深入追问。关注技术实现细节、个人贡献、遇到的困难和解决方法。",
+      "scoring_dims": ["技术深度", "问题分析能力", "诚实度"],
+      "follow_up_depth": 3,
+      "skills_required": ["research_questioning", "code_implementation_probing"],
+      "adaptive_rules": { "extend_if": "用户回答有深度", "extend_max_min": 2, "skip_if": "用户连续2次明确表示不了解", "difficulty_adjust": true }
+    },
+    {
+      "id": "basics",
+      "name": "专业基础",
+      "type": "qa",
+      "duration_min": 3,
+      "strict_timer": true,
+      "instructions": "考察与研究方向相关的ML/DL基础知识。根据用户方向选择合适的题目。",
+      "scoring_dims": ["知识广度", "概念清晰度"],
+      "follow_up_depth": 1,
+      "skills_required": ["ml_basics_questioning"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 1, "skip_if": "", "difficulty_adjust": true }
+    },
+    {
+      "id": "open",
+      "name": "开放问题",
+      "type": "open_discussion",
+      "duration_min": 2,
+      "strict_timer": true,
+      "instructions": "询问未来规划和对课题组的价值。",
+      "scoring_dims": ["规划清晰度", "匹配度", "真诚度"],
+      "follow_up_depth": 1,
+      "skills_required": ["open_questions"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 0, "skip_if": "", "difficulty_adjust": false }
+    }
+  ],
+  "interviewer_persona": {
+    "style": "专业、客观，适度追问，给学生充分展示的机会。",
+    "focus_areas": ["科研经历", "技术能力", "研究潜力"],
+    "red_flags_to_probe": ["团队项目中的个人贡献", "AI工具辅助实现的理解深度"],
+    "criteria_insights": [
+      "重视研究潜力而非当前成果",
+      "能清晰说明自己的贡献",
+      "有独立思考能力"
+    ]
+  }
+}

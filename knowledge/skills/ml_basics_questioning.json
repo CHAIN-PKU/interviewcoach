@@ -1,0 +1,42 @@
+{
+  "id": "ml_basics_questioning",
+  "name": "ML基础出题策略",
+  "version": "1.0",
+  "strategy": {
+    "selection_rule": "根据用户目标导师的研究方向，优先从匹配的topic pool出题。出2-3题即可，不要过多。",
+    "topic_pools": {
+      "diffusion_models": [
+        "扩散模型的前向过程和反向过程分别在做什么？",
+        "DDPM和DDIM的核心区别是什么？",
+        "score matching和denoising score matching有什么联系？",
+        "classifier-free guidance的原理是什么？为什么有效？",
+        "扩散模型和GAN相比，优势和劣势分别是什么？"
+      ],
+      "bayesian_dl": [
+        "贝叶斯推断和频率派方法的核心区别是什么？",
+        "变分推断在做什么？ELBO的含义是什么？",
+        "VAE的reparameterization trick为什么需要？"
+      ],
+      "general_ml": [
+        "Bias-Variance Tradeoff是什么？怎么在实践中处理？",
+        "Transformer的self-attention的时间复杂度是多少？为什么？",
+        "BatchNorm和LayerNorm的区别和各自适用场景？",
+        "梯度消失和梯度爆炸的原因和解决方法？"
+      ],
+      "embodied_ai": [
+        "Sim-to-Real迁移的主要挑战是什么？有哪些常见方法？",
+        "在具身智能中，如何处理传感器噪声和延迟？",
+        "模仿学习和强化学习的核心区别？各自适用什么场景？"
+      ],
+      "rl": [
+        "on-policy和off-policy的区别？各自的代表算法？",
+        "PPO相比TRPO的改进是什么？"
+      ],
+      "ai4science": [
+        "物理约束通过损失函数引入时，与PINN的硬约束有何区别？",
+        "时间一致性在序列预测中如何形式化？",
+        "科学机器学习模型如何评估物理合理性而不仅是RMSE？"
+      ]
+    }
+  }
+}

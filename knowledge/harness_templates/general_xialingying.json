@@ -1,0 +1,67 @@
+{
+  "id": "general-xialingying-2025",
+  "name": "通用夏令营面试",
+  "description": "适用于CS/AI方向夏令营面试，通常15分钟左右，8+7结构",
+  "source": "system",
+  "tags": ["通用", "夏令营", "CS", "AI", "ML"],
+  "stages": [
+    {
+      "id": "intro",
+      "name": "个人汇报",
+      "type": "presentation",
+      "duration_min": 8,
+      "strict_timer": true,
+      "instructions": "用户进行8分钟个人汇报。考官不打断，计时到点提醒。评估：汇报结构是否清晰、科研亮点是否突出、时间控制是否合理。",
+      "scoring_dims": ["内容完整性", "重点突出度", "时间控制", "表达流畅度"],
+      "follow_up_depth": 0,
+      "skills_required": ["presentation_coaching"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 0, "skip_if": "", "difficulty_adjust": false }
+    },
+    {
+      "id": "research_drill",
+      "name": "科研追问",
+      "type": "qa",
+      "duration_min": 4,
+      "strict_timer": true,
+      "instructions": "基于汇报内容深挖1-2个核心项目的技术细节，追问个人贡献边界。",
+      "scoring_dims": ["技术深度", "问题分析能力", "诚实度"],
+      "follow_up_depth": 3,
+      "skills_required": ["research_questioning", "code_implementation_probing"],
+      "adaptive_rules": { "extend_if": "有明显追问空间", "extend_max_min": 2, "skip_if": "连续2次明确不了解", "difficulty_adjust": true }
+    },
+    {
+      "id": "basics",
+      "name": "专业基础",
+      "type": "qa",
+      "duration_min": 2,
+      "strict_timer": true,
+      "instructions": "2-3道与研究方向相关的基础问题。",
+      "scoring_dims": ["知识广度", "概念清晰度"],
+      "follow_up_depth": 1,
+      "skills_required": ["ml_basics_questioning"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 1, "skip_if": "", "difficulty_adjust": true }
+    },
+    {
+      "id": "open",
+      "name": "开放问题",
+      "type": "open_discussion",
+      "duration_min": 1,
+      "strict_timer": true,
+      "instructions": "为什么选这个组、未来规划、你的价值。",
+      "scoring_dims": ["规划清晰度", "匹配度", "真诚度"],
+      "follow_up_depth": 1,
+      "skills_required": ["open_questions"],
+      "adaptive_rules": { "extend_if": "", "extend_max_min": 0, "skip_if": "", "difficulty_adjust": false }
+    }
+  ],
+  "interviewer_persona": {
+    "style": "专业但友好，节奏明快，时间意识强。",
+    "focus_areas": ["科研经历", "技术能力", "研究规划"],
+    "red_flags_to_probe": ["AI工具辅助工作的实际理解", "团队贡献的个人边界"],
+    "criteria_insights": [
+      "展示研究潜力比当前成果更重要",
+      "诚实承认不足比硬撑更有说服力",
+      "说明你能给课题组带来独特价值"
+    ]
+  }
+}
