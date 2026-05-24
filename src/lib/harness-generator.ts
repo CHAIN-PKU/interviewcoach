@@ -197,11 +197,16 @@ ${ragContext || "（无匹配经验，按通用保研逻辑设计）"}
 - stages.instructions 是考官内部指令，可具体，但不会展示给用户`;
 
   try {
-    const raw = await callLLMText(config, "只输出 JSON 对象。", [{ role: "user", content: prompt }]);
+    const raw = await callLLMText(
+      config,
+      "只输出 JSON 对象。",
+      [{ role: "user", content: prompt }],
+      20000
+    );
     const match = raw.match(/\{[\s\S]*\}/);
     if (!match) throw new Error("no json");
 
-    const parsed = JSON.parse(match[0]) as {
+    let parsed: {
       personalization?: {
         headline?: string;
         rationale?: string[];
@@ -211,6 +216,13 @@ ${ragContext || "（无匹配经验，按通用保研逻辑设计）"}
       interviewer_persona?: Partial<HarnessTemplate["interviewer_persona"]>;
       stages?: Array<{ id: string; instructions?: string; duration_min?: number }>;
     };
+    try {
+      parsed = JSON.parse(match[0]);
+    } catch {
+      // LLM JSON often has trailing commas or minor syntax issues — salvage if possible
+      const repaired = match[0].replace(/,\s*([}\]])/g, "$1");
+      parsed = JSON.parse(repaired);
+    }
 
     const merged: HarnessTemplate = JSON.parse(JSON.stringify(ruleBased));
     merged.name = `${targetSchool || merged.name.split("-")[0]}${direction ? ` · ${direction}` : ""} 定制方案`;

@@ -39,7 +39,8 @@ export async function callLLM(
   config: ModelConfig,
   system: string,
   messages: Message[],
-  stream = false
+  stream = false,
+  timeoutMs = 45000
 ): Promise<Response> {
   const body = {
     model: config.model,
@@ -57,15 +58,17 @@ export async function callLLM(
       "X-Title": "InterviewCoach",
     },
     body: JSON.stringify(body),
+    signal: AbortSignal.timeout(timeoutMs),
   });
 }
 
 export async function callLLMText(
   config: ModelConfig,
   system: string,
-  messages: Message[]
+  messages: Message[],
+  timeoutMs = 45000
 ): Promise<string> {
-  const res = await callLLM(config, system, messages, false);
+  const res = await callLLM(config, system, messages, false, timeoutMs);
   if (!res.ok) {
     const err = await res.text();
     throw new Error(`LLM error ${res.status}: ${err.slice(0, 200)}`);

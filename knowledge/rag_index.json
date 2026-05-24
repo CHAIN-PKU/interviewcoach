@@ -1,6 +1,1073 @@
 {
   "entries": [
     {
+      "id": "exp_tsinghua_cs_zhujun",
+      "type": "experience",
+      "summary": "清华大学计算机系朱军教授组：夏令营/保研面试常见流程与考察偏好",
+      "tags": [
+        "清华",
+        "清华大学",
+        "朱军",
+        "计算机",
+        "扩散模型",
+        "贝叶斯",
+        "生成模型",
+        "夏令营",
+        "保研"
+      ],
+      "key_insights": [
+        "研究方向：生成模型、扩散模型、贝叶斯深度学习、AI 安全与对齐",
+        "常见流程：个人科研汇报约 8 分钟 + 技术问答，侧重时间控制与表达结构",
+        "考察偏好：扩散/变分推断基础、实验设计与 ablation、对本人贡献与实现细节的真实理解",
+        "追问风格：学术严谨但不刁难；团队项目区分个人贡献；AI 辅助实现会追问理解深度",
+        "实验室主页：https://ml.cs.tsinghua.edu.cn/"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tsinghua_ai_college",
+      "type": "experience",
+      "summary": "清华大学人工智能学院（姚期智领衔）：保研/夏令营总体特点",
+      "tags": [
+        "清华",
+        "清华大学",
+        "人工智能",
+        "姚期智",
+        "计算机",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "2024 年成立，聚焦 AI 核心与 AI+交叉：具身智能、多模态感知、科学智能、AI 安全治理等",
+        "重视数理基础与原创性研究潜力，汇报需突出个人思考而非堆砌项目名",
+        "开放性问题常问研究规划、为何选 AI 方向、你能解决什么核心问题",
+        "学院主页：https://collegeai.tsinghua.edu.cn/"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tsinghua_tangjie_llm",
+      "type": "experience",
+      "summary": "清华大学计算机系唐杰教授组：知识图谱与大模型方向",
+      "tags": [
+        "清华",
+        "清华大学",
+        "唐杰",
+        "大语言模型",
+        "知识图谱",
+        "数据挖掘",
+        "计算机"
+      ],
+      "key_insights": [
+        "研究方向：人工智能、社交网络分析、数据挖掘、机器学习、知识图谱；基础模型研究中心",
+        "代表平台：AMiner 科技情报大数据系统",
+        "面试偏好：对 graph/KG 基础、大模型训练与应用结合、科研工程落地能力",
+        "个人/团队信息：https://hub.baai.ac.cn/users/19041"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tsinghua_liuzhiyuan_nlp",
+      "type": "experience",
+      "summary": "清华大学计算机系刘知远副教授：NLP 与大模型方向",
+      "tags": [
+        "清华",
+        "清华大学",
+        "刘知远",
+        "大语言模型",
+        "自然语言处理",
+        "计算机"
+      ],
+      "key_insights": [
+        "研究方向：自然语言处理、知识图谱、大语言模型、社会计算",
+        "常见考察：预训练/微调概念、Transformer 基础、对 NLP 任务的建模思路",
+        "组内风格：重视代码实现与论文复现能力，追问「为什么这样设计」",
+        "可参考：清华大学基础模型研究中心相关公开报告与论文列表"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tsinghua_zhusongchun_agI",
+      "type": "experience",
+      "summary": "清华大学/北大 朱松纯教授：通用人工智能与认知视觉",
+      "tags": [
+        "清华",
+        "清华大学",
+        "朱松纯",
+        "通用人工智能",
+        "计算机视觉",
+        "认知",
+        "具身智能"
+      ],
+      "key_insights": [
+        "研究方向：计算机视觉、统计建模、认知与常识推理、自主机器人、通用 AI",
+        "研究范式强调「小数据、大任务」与物理/社会常识",
+        "面试可能追问：对 AGI 路径的理解、视觉解译(parsing)、跨学科思考",
+        "清华主页：https://www.au.tsinghua.edu.cn/info/1152/3341.htm",
+        "个人主页：https://zhusongchun.net/"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tsinghua_zhoubowen_multimodal",
+      "type": "experience",
+      "summary": "清华大学电子系周伯文教授：语音 NLP 与多模态可信 AI",
+      "tags": [
+        "清华",
+        "清华大学",
+        "周伯文",
+        "自然语言处理",
+        "大语言模型",
+        "多模态",
+        "可信AI"
+      ],
+      "key_insights": [
+        "研究方向：语音与 NLP、多模态理解与推理、知识表示、人机对话、可信 AI",
+        "C3I 中心：协同认知交互智能",
+        "工业+学术背景，可能追问大模型落地、对话系统、多模态对齐",
+        "主页：http://web.ee.tsinghua.edu.cn/zhoubowen/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tsinghua_cs_general",
+      "type": "experience",
+      "summary": "清华大学计算机系保研/夏令营：通用面试经验",
+      "tags": [
+        "清华",
+        "清华大学",
+        "计算机",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "重视数理基础、科研潜力与个人贡献清晰度",
+        "基础题覆盖 ML/DL 核心概念，追问落到具体项目细节",
+        "开放性问题：为何选清华/该组、未来三年计划、你能带来什么",
+        "院系：https://www.cs.tsinghua.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_pku_sai_zhusongchun",
+      "type": "experience",
+      "summary": "北京大学智能学院朱松纯院长：通用人 AI 方向招生特点",
+      "tags": [
+        "北大",
+        "北京大学",
+        "朱松纯",
+        "智能学院",
+        "通用人工智能",
+        "计算机视觉",
+        "具身智能"
+      ],
+      "key_insights": [
+        "智能学院 2021 年成立，聚焦通用 AI、视觉、认知、机器人",
+        "强调跨学科整合与原创性研究路径",
+        "面试可能问：对 AGI 的理解、认知架构、视觉+语言+行动整合",
+        "学院主页：https://sai.pku.edu.cn/"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_pku_chenbaoquan_vcl",
+      "type": "experience",
+      "summary": "北京大学智能学院陈宝权教授：可视计算与学习",
+      "tags": [
+        "北大",
+        "北京大学",
+        "陈宝权",
+        "计算机图形学",
+        "三维视觉",
+        "可视化",
+        "智能学院"
+      ],
+      "key_insights": [
+        "研究方向：计算机图形学、三维视觉、可视计算与机器学习交叉",
+        "可视计算与学习实验室(VCL)：面向机器人与内容创作",
+        "考察：图形学/几何基础、三维重建思路、论文/项目个人贡献",
+        "实验室：https://vcl.pku.edu.cn/"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_pku_zhangming_kg",
+      "type": "experience",
+      "summary": "北京大学计算机学院张铭教授：知识图谱与图机器学习",
+      "tags": [
+        "北大",
+        "北京大学",
+        "张铭",
+        "知识图谱",
+        "图神经网络",
+        "自然语言处理",
+        "计算机"
+      ],
+      "key_insights": [
+        "研究方向：文本挖掘、知识图谱、图神经网络、教育大数据",
+        "面试可能问：GNN 基础、KG 构建与推理、文本+图联合建模",
+        "学院主页：https://cs.pku.edu.cn/info/1086/1730.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_pku_ece_general",
+      "type": "experience",
+      "summary": "北京大学信息科学技术学院：CS/AI 保研面试概况",
+      "tags": [
+        "北大",
+        "北京大学",
+        "信科",
+        "计算机",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "结构：自我介绍 + 科研深挖 + 专业基础 + 研究规划",
+        "偏好：数学与编程基础、个人贡献、研究动机与长期规划",
+        "学院：https://www.ece.pku.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_zju_zhuangyueting_ai",
+      "type": "experience",
+      "summary": "浙江大学庄越挺教授：跨媒体智能与知识图谱",
+      "tags": [
+        "浙大",
+        "浙江大学",
+        "庄越挺",
+        "人工智能",
+        "知识图谱",
+        "跨媒体",
+        "计算机"
+      ],
+      "key_insights": [
+        "研究方向：AI 理论、跨媒体智能、大数据智能、多媒体检索、知识图谱",
+        "教育部 AI 协同创新中心主任",
+        "主页：https://person.zju.edu.cn/yzhuang"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_zju_zhoukun_cg",
+      "type": "experience",
+      "summary": "浙江大学周昆教授：计算机图形学与视觉",
+      "tags": [
+        "浙大",
+        "浙江大学",
+        "周昆",
+        "计算机视觉",
+        "计算机图形学",
+        "虚拟现实",
+        "计算机"
+      ],
+      "key_insights": [
+        "研究方向：图形学、视觉、人机交互、VR",
+        "可能考察：渲染/几何基础、三维视觉 pipeline、项目创新点",
+        "主页：https://person.zju.edu.cn/kunzhou"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_zju_cs_general",
+      "type": "experience",
+      "summary": "浙江大学计算机学院/人工智能学院：保研夏令营概况",
+      "tags": [
+        "浙大",
+        "浙江大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "人工智能研究所与 CAD&CG 国重为 AI/视觉强点",
+        "重视工程实现与论文/竞赛经历，追问项目细节与个人贡献",
+        "学院：https://www.cs.zju.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_sjtu_yukai_nlp",
+      "type": "experience",
+      "summary": "上海交通大学俞凯教授：跨媒体语言智能与大模型",
+      "tags": [
+        "上交",
+        "上海交通大学",
+        "俞凯",
+        "大语言模型",
+        "自然语言处理",
+        "语音",
+        "计算机"
+      ],
+      "key_insights": [
+        "X-LANCE 实验室：语音、NLP、多模态交互、语言大模型与智能体",
+        "思必驰联合创始人，语言计算国家 AI 开放创新平台负责人",
+        "可能考察：对话系统、ASR/TTS 基础、LLM 应用与工程",
+        "主页：https://x-lance.sjtu.edu.cn/~kaiyu/index_zh.html"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_sjtu_yanjunchi_ml",
+      "type": "experience",
+      "summary": "上海交通大学人工智能学院严骏驰教授：机器学习交叉应用",
+      "tags": [
+        "上交",
+        "上海交通大学",
+        "严骏驰",
+        "机器学习",
+        "大语言模型",
+        "人工智能"
+      ],
+      "key_insights": [
+        "研究方向：机器学习及交叉应用（大模型、自动驾驶、科学智能等）",
+        "长期担任 ICML/NeurIPS/ICLR 领域主席",
+        "AI 学院：https://soai.sjtu.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_sjtu_cs_general",
+      "type": "experience",
+      "summary": "上海交通大学计算机/AI 方向：保研面试概况",
+      "tags": [
+        "上交",
+        "上海交通大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "AI 学院与计算机学院并重，NLP/语音/ML 为传统强项",
+        "重视数学基础、论文/竞赛、对大模型时代的理解",
+        "院系：https://www.cs.sjtu.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_fudan_qiyuan_genai",
+      "type": "experience",
+      "summary": "复旦大学漆远教授：生成式 AI 与科学智能",
+      "tags": [
+        "复旦",
+        "复旦大学",
+        "漆远",
+        "大语言模型",
+        "贝叶斯",
+        "生成式人工智能",
+        "计算机"
+      ],
+      "key_insights": [
+        "研究方向：生成式 AI、深度学习、贝叶斯学习、AI for Science",
+        "人工智能创新与产业研究院院长，上海科学智能研究院",
+        "可能考察：生成模型基础、AI+科学交叉、产业落地思考",
+        "主页：https://ai3.fudan.edu.cn/info/1075/1414.htm"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_fudan_cs_ai_general",
+      "type": "experience",
+      "summary": "复旦大学计算机学院人工智能方向：总体特点",
+      "tags": [
+        "复旦",
+        "复旦大学",
+        "计算机",
+        "人工智能",
+        "自然语言处理",
+        "计算机视觉",
+        "保研"
+      ],
+      "key_insights": [
+        "AI 方向近 30 名教师，NLP/视觉/机器人等；CSRankings AI 全球前列",
+        "代表成果：MOSS 大模型、视觉计算、NLP 表示学习等",
+        "面试重视理论+应用结合，可能问 MOSS/大模型相关理解",
+        "方向介绍：https://cs.fudan.edu.cn/7b/d6/c24781a490454/page.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_fudan_doudejing_dm",
+      "type": "experience",
+      "summary": "复旦大学窦德景教授：数据挖掘与 NLP",
+      "tags": [
+        "复旦",
+        "复旦大学",
+        "窦德景",
+        "数据挖掘",
+        "自然语言处理",
+        "人工智能"
+      ],
+      "key_insights": [
+        "研究方向：AI、数据挖掘、数据整合、NLP、健康信息学",
+        "主页：https://faculty.fudan.edu.cn/DejingDou/zh_CN/index.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_nju_zhouzhihua_ml",
+      "type": "experience",
+      "summary": "南京大学周志华教授/LAMDA：机器学习方向标杆",
+      "tags": [
+        "南大",
+        "南京大学",
+        "周志华",
+        "机器学习",
+        "人工智能",
+        "计算机"
+      ],
+      "key_insights": [
+        "LAMDA 研究所创始人，AI 学院院长；方向：ML 理论、弱监督、集成学习等",
+        "面试极重 ML 基础：《机器学习》教材级别概念必须扎实",
+        "可能问：偏差-方差、集成方法、半监督/弱监督、对不确定性的建模",
+        "AI 学院：https://ai.nju.edu.cn/"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_nju_qianchao_evo",
+      "type": "experience",
+      "summary": "南京大学钱超教授：演化计算与机器学习",
+      "tags": [
+        "南大",
+        "南京大学",
+        "钱超",
+        "机器学习",
+        "演化计算",
+        "人工智能"
+      ],
+      "key_insights": [
+        "研究方向：AI、演化计算、ML；顶会 ICML/NeurIPS/ICLR 等",
+        "主页：https://ai.nju.edu.cn/71/c9/c18540a422345/pagem.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_nju_cs_general",
+      "type": "experience",
+      "summary": "南京大学计算机/AI：保研夏令营概况",
+      "tags": [
+        "南大",
+        "南京大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "软件新技术国重连续优秀，AI 为传统王牌方向",
+        "重视 ML 基础与科研潜力，LAMDA 相关组竞争 extremely 激烈",
+        "学院：https://cs.nju.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_ustc_cs_ai_general",
+      "type": "experience",
+      "summary": "中国科学技术大学：计算机/AI 保研面试概况",
+      "tags": [
+        "中科大",
+        "中国科学技术大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "数理基础要求极高，重视理论推导与科研严谨性",
+        "语音及语言信息处理国工、自动化系 AI 方向为强项",
+        "常见结构：汇报 + 基础数学/ML + 科研深挖",
+        "计算机学院：https://cs.ustc.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_ustc_yujun_multimodal",
+      "type": "experience",
+      "summary": "中科大於俊副教授：多媒体计算与智能机器人",
+      "tags": [
+        "中科大",
+        "中国科学技术大学",
+        "於俊",
+        "多媒体",
+        "智能机器人",
+        "人工智能"
+      ],
+      "key_insights": [
+        "研究方向：AI、多媒体计算、智能机器人、多模态智能体",
+        "主页：https://faculty.ustc.edu.cn/yujun_AI/zh_CN/index.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_hit_ai_general",
+      "type": "experience",
+      "summary": "哈尔滨工业大学人工智能学院：保研概况",
+      "tags": [
+        "哈工大",
+        "哈尔滨工业大学",
+        "人工智能",
+        "计算机",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "NLP、机器翻译、机器人等传统强项",
+        "工程实现与系统能力受重视",
+        "AI 学院：https://sai.hit.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_hit_nlp_lab",
+      "type": "experience",
+      "summary": "哈工大机器智能与翻译研究室：NLP 方向",
+      "tags": [
+        "哈工大",
+        "哈尔滨工业大学",
+        "自然语言处理",
+        "机器翻译",
+        "计算机"
+      ],
+      "key_insights": [
+        "国内早期机器翻译系统发源地，微软联合实验室演进至教育部重点实验室",
+        "方向：NLP、机器翻译、机器学习",
+        "实验室：https://mitlab.hit.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_xjtu_ai_general",
+      "type": "experience",
+      "summary": "西安交通大学：人工智能与机器人方向保研概况",
+      "tags": [
+        "西交",
+        "西安交通大学",
+        "人工智能",
+        "机器人",
+        "计算机",
+        "保研"
+      ],
+      "key_insights": [
+        "人工智能与机器人研究所为传统强点",
+        "重视数理基础、控制+AI 交叉、工程落地",
+        "结构：自我介绍 + 科研 + 基础 + 规划"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_hust_zhenglong_sys",
+      "type": "experience",
+      "summary": "华中科技大学郑龙教授：AI 大模型系统结构",
+      "tags": [
+        "华科",
+        "华中科技大学",
+        "郑龙",
+        "大语言模型",
+        "图计算",
+        "计算机"
+      ],
+      "key_insights": [
+        "研究方向：AI 大模型、图计算、数据流、系统结构",
+        "顶会 MICRO/ISCA/HPCA 等，偏系统+AI 交叉",
+        "主页：http://faculty.hust.edu.cn/ZhengLong/zh_CN/index.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_hust_cs_general",
+      "type": "experience",
+      "summary": "华中科技大学计算机学院：保研夏令营概况",
+      "tags": [
+        "华科",
+        "华中科技大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "存储、系统、AI 方向均有强组；重视工程与论文",
+        "学院：https://cs.hust.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_seu_ai_lab",
+      "type": "experience",
+      "summary": "东南大学新一代 AI 技术与交叉应用重点实验室",
+      "tags": [
+        "东南",
+        "东南大学",
+        "人工智能",
+        "计算机",
+        "保研",
+        "知识图谱"
+      ],
+      "key_insights": [
+        "方向：知识图谱、可解释推理、多标记学习、医学影像、手术机器人",
+        "交叉应用导向强（司法、医疗等）",
+        "实验室：https://aiia.seu.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_buaa_liu_xianglong",
+      "type": "experience",
+      "summary": "北京航空航天大学刘祥龙教授：智能安全与开放认知",
+      "tags": [
+        "北航",
+        "北京航空航天大学",
+        "刘祥龙",
+        "计算机视觉",
+        "智能安全",
+        "计算机"
+      ],
+      "key_insights": [
+        "研究方向：智能安全、开放认知、CV/ML",
+        "计算机学院副院长，复杂关键软件环境国重副主任",
+        "主页：http://gjjzx.buaa.edu.cn/info/1086/1286.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_buaa_cs_general",
+      "type": "experience",
+      "summary": "北京航空航天大学计算机/AI：保研概况",
+      "tags": [
+        "北航",
+        "北京航空航天大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "夏令营"
+      ],
+      "key_insights": [
+        "AI 研究院与计算机学院并重，视觉/安全/软件为强项",
+        "重视国防与工程背景项目的个人贡献与合规意识",
+        "AI 研究院：https://ai.buaa.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_ruc_gaoling_ai",
+      "type": "experience",
+      "summary": "中国人民大学高瓴人工智能学院：总体特点",
+      "tags": [
+        "人大",
+        "中国人民大学",
+        "人工智能",
+        "大语言模型",
+        "信息检索",
+        "计算机"
+      ],
+      "key_insights": [
+        "文继荣、赵鑫、陈旭等：信息检索、NLP、大模型智能体、推荐系统",
+        "年轻学院、论文产出高，重视 ML/NLP 基础与 coding",
+        "学院：https://ai.ruc.edu.cn/"
+      ],
+      "quality": 5,
+      "source": "curated"
+    },
+    {
+      "id": "exp_ruc_chenxu_llm_agent",
+      "type": "experience",
+      "summary": "中国人民大学陈旭副教授：大模型智能体与强化学习",
+      "tags": [
+        "人大",
+        "中国人民大学",
+        "陈旭",
+        "大语言模型",
+        "强化学习",
+        "推荐系统"
+      ],
+      "key_insights": [
+        "方向：LLM 智能体、RL、因果推断、推荐系统",
+        "主页：http://ai.ruc.edu.cn/academicfaculty/szdwn/cx/index.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_uestc_zoujie_ir",
+      "type": "experience",
+      "summary": "电子科技大学邹杰教授：信息检索与多模态推荐",
+      "tags": [
+        "成电",
+        "电子科技大学",
+        "邹杰",
+        "自然语言处理",
+        "推荐系统",
+        "多模态",
+        "计算机"
+      ],
+      "key_insights": [
+        "方向：IR、NLP、推荐、多模态、智能体",
+        "主页：https://faculty.uestc.edu.cn/zoujie1/zh_CN/index.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_uestc_renyazhou_cv",
+      "type": "experience",
+      "summary": "电子科技大学任亚洲教授：多模态大模型与视觉",
+      "tags": [
+        "成电",
+        "电子科技大学",
+        "任亚洲",
+        "计算机视觉",
+        "大语言模型",
+        "多模态"
+      ],
+      "key_insights": [
+        "方向：多视图学习、多模态大模型、CV、智慧医疗",
+        "研招网导师页可查详细方向"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_uestc_cs_general",
+      "type": "experience",
+      "summary": "电子科技大学计算机学院：AI 方向保研概况",
+      "tags": [
+        "成电",
+        "电子科技大学",
+        "计算机",
+        "人工智能",
+        "保研"
+      ],
+      "key_insights": [
+        "ML/CV/NLP 均有布局，偏工程与应用",
+        "学院：https://www.scse.uestc.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_dlut_chenliming",
+      "type": "experience",
+      "summary": "大连理工大学陈立明教授：情景计算与混合智能",
+      "tags": [
+        "大工",
+        "大连理工大学",
+        "陈立明",
+        "人工智能",
+        "多模态",
+        "计算机"
+      ],
+      "key_insights": [
+        "方向：情景计算、认知数据分析、符号+神经混合智能、多模态交互",
+        "主页：https://faculty.dlut.edu.cn/chenliming/zh_CN/index.htm"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tongji_rail_robotics",
+      "type": "experience",
+      "summary": "同济大学机器人与人工智能实验室(RAIL)：陈启军组",
+      "tags": [
+        "同济",
+        "同济大学",
+        "陈启军",
+        "具身智能",
+        "机器人",
+        "人工智能"
+      ],
+      "key_insights": [
+        "方向：工业/移动机器人、3D 视觉、无人驾驶、多传感器融合",
+        "陈启军教授：AI 与机器人，长期国家/省部级项目主持",
+        "实验室：https://rail.tongji.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tongji_cs_general",
+      "type": "experience",
+      "summary": "同济大学电子与信息/AI 相关：保研概况",
+      "tags": [
+        "同济",
+        "同济大学",
+        "计算机",
+        "人工智能",
+        "保研"
+      ],
+      "key_insights": [
+        "控制+AI+机器人交叉强，工程导向",
+        "学院：https://see.tongji.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_scut_cs_general",
+      "type": "experience",
+      "summary": "华南理工大学计算机学院：AI 方向保研概况",
+      "tags": [
+        "华工",
+        "华南理工大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "广州"
+      ],
+      "key_insights": [
+        "粤港澳大湾区产业结合紧密，重视工程落地",
+        "常见：项目经历深挖 + ML 基础 + 就业/读博规划",
+        "学院：https://www2.scut.edu.cn/cs/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_csu_cs_general",
+      "type": "experience",
+      "summary": "中南大学计算机学院：AI 保研概况",
+      "tags": [
+        "中南",
+        "中南大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "长沙"
+      ],
+      "key_insights": [
+        "医学+AI 交叉为特色方向之一",
+        "重视数理与编程基础、科研经历真实性",
+        "学院：https://csu.edu.cn/cs/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_hnu_cs_general",
+      "type": "experience",
+      "summary": "湖南大学信息科学与工程学院：AI/CS 保研概况",
+      "tags": [
+        "湖大",
+        "湖南大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "长沙"
+      ],
+      "key_insights": [
+        "视觉、机器人、嵌入式 AI 为方向之一",
+        "学院：https://www.hnu.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_neu_cs_general",
+      "type": "experience",
+      "summary": "东北大学计算机学院：AI 保研概况",
+      "tags": [
+        "东大",
+        "东北大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "沈阳"
+      ],
+      "key_insights": [
+        "流程工业、工业智能、计算机应用为传统优势",
+        "学院：https://www.neu.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_jlu_cs_general",
+      "type": "experience",
+      "summary": "吉林大学计算机学院：AI 保研概况",
+      "tags": [
+        "吉大",
+        "吉林大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "长春"
+      ],
+      "key_insights": [
+        "符号计算、知识工程、ML 均有布局",
+        "学院：https://ccst.jlu.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_scu_cs_general",
+      "type": "experience",
+      "summary": "四川大学计算机学院：AI 保研概况",
+      "tags": [
+        "川大",
+        "四川大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "成都"
+      ],
+      "key_insights": [
+        "视觉、NLP、医学 AI 等交叉方向",
+        "学院：https://cs.scu.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_cqu_cs_general",
+      "type": "experience",
+      "summary": "重庆大学计算机学院：AI 保研概况",
+      "tags": [
+        "重大",
+        "重庆大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "重庆"
+      ],
+      "key_insights": [
+        "智能制造、大数据、AI 应用为方向之一",
+        "学院：https://www.cqu.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_bit_cs_general",
+      "type": "experience",
+      "summary": "北京理工大学计算机学院：AI 保研概况",
+      "tags": [
+        "北理工",
+        "北京理工大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "北京"
+      ],
+      "key_insights": [
+        "国防与工程背景强，重视系统能力与项目贡献",
+        "学院：https://cs.bit.edu.cn/"
+      ],
+      "quality": 4,
+      "source": "curated"
+    },
+    {
+      "id": "exp_tju_cs_general",
+      "type": "experience",
+      "summary": "天津大学智能与计算学部：AI/CS 保研概况",
+      "tags": [
+        "天大",
+        "天津大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "天津"
+      ],
+      "key_insights": [
+        "智能与计算学部整合 CS+软件+AI",
+        "学院：https://cic.tju.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_xmu_cs_general",
+      "type": "experience",
+      "summary": "厦门大学信息学院：AI/CS 保研概况",
+      "tags": [
+        "厦大",
+        "厦门大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "厦门"
+      ],
+      "key_insights": [
+        "CV、多媒体、海洋/医学 AI 交叉",
+        "学院：https://info.xmu.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_sdu_cs_general",
+      "type": "experience",
+      "summary": "山东大学计算机学院：AI 保研概况",
+      "tags": [
+        "山大",
+        "山东大学",
+        "计算机",
+        "人工智能",
+        "保研",
+        "济南"
+      ],
+      "key_insights": [
+        "软件、AI、网络空间安全等多方向",
+        "学院：https://www.science.sdu.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
+      "id": "exp_lzu_cs_general",
+      "type": "experience",
+      "summary": "兰州大学信息科学与工程学院：CS/AI 保研概况",
+      "tags": [
+        "兰大",
+        "兰州大学",
+        "计算机",
+        "人工智能",
+        "保研"
+      ],
+      "key_insights": [
+        "西部重点高校，基础学科与 AI 交叉",
+        "学院：https://xxxy.lzu.edu.cn/"
+      ],
+      "quality": 3,
+      "source": "curated"
+    },
+    {
       "id": "community_weak_attention_3h2k",
       "type": "criteria",
       "summary": "学生回答技术细节时容易展开过度，考官应控制时间并引导核心要点",
